@@ -1,0 +1,64 @@
+// typography
+html{
+    font-size: 100%;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizelegibility;
+
+    -moz-osx-font-smoothing: grayscale;
+
+    .css-hyphens (auto);
+    .break-word;
+
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+}
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    color: @body-copy-color;
+    background: @body-color;
+}
+
+textarea, pre, code, kbd, samp, var, tt {
+    font-family: Courier, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    color: @heading-color;
+
+    .subheading {
+        color: @subheading-color;
+    }
+}
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%
+}
+
+article {
+    margin: 1em;
+}
+
+@media screen and (min-width: 21em) {
+    .main {
+        width: 88vw;
+    }
+}
+
+@media screen and (min-width: 38em) {
+    .main {
+        width: 66vw;
+        max-width: 50em;
+    }
+}

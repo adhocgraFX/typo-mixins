@@ -1,0 +1,81 @@
+// Variables
+
+// 3 font sizes
+@font-size: 1em; // html: 100%; body = 16px
+@font-size-medium: 1.125em; // html: 100%; body = 16px * 1.125 = 18px
+@font-size-large: 1.25em; // html: 100%; body = 16px * 1.25 = 20px
+
+// 3 Scale modes
+@ratio: 1.2; // mobile scale: 6:5 = 1.2
+@ratio-medium: 1.33; // tablet and medium desktop scale: 4:3 = 1.33
+@ratio-large: 1.618; // large desktop scale = 1.618 = Golden Ratio
+
+// 3 line-heights
+@line-height: 1.4;
+@line-height-medium: 1.45;
+@line-height-large: 1.5;
+
+// heading line-height
+@line-height-heading: 1.1;
+
+// space between paragraphs
+@paragraph-val: 1em;
+
+
+// Typography Mixin
+
+.typography(@font-size, @ratio, @line-height) {
+
+    p {
+        font-size: @font-size;
+        line-height: @line-height;
+        margin-top: @paragraph-val;
+        margin-bottom: @paragraph-val / 2;
+    }
+
+    h1, h2, h3, h4 {
+        line-height: @line-height-heading;
+        margin-top: @paragraph-val;
+        margin-bottom: @paragraph-val / 2;
+    }
+
+    h1 {
+        font-size: (((@font-size * @ratio) * @ratio) * @ratio);
+    }
+
+    h2 {
+        font-size: ((@font-size * @ratio) * @ratio);
+    }
+
+    h3 {
+        font-size: @font-size * @ratio;
+    }
+
+    h4 {
+        font-size: @font-size;
+    }
+}
+
+
+// Media Queries
+.typography(@font-size, @ratio, @line-height);
+
+@media screen and (min-width: 21em) {
+    .typography(@font-size, @ratio, @line-height);
+}
+
+@media screen and (min-width: 38em) {
+    .typography(@font-size-medium, @ratio-medium, @line-height-medium);
+}
+
+@media screen and (min-width: 48em) {
+    .typography(@font-size-medium, @ratio-medium, @line-height-medium);
+}
+
+@media screen and (min-width: 80em) {
+    .typography(@font-size-large, @ratio-large, @line-height-large);
+}
+
+@media screen and (min-width: 100em) {
+    .typography(@font-size-large, @ratio-large, @line-height-large);
+}
