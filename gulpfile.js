@@ -8,7 +8,6 @@ var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefix = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
-var connect = require('gulp-connect');
 var livereload = require('gulp-livereload');
 
 // hello world
@@ -33,18 +32,11 @@ gulp.task('style', function () {
 
 // WATCH
 gulp.task('watch', function(){
-    // chrome > livereload plugin required
+    // in chrome > livereload plugin required
     livereload.listen();
 
     // TEMPLATE FILES
     gulp.watch('styles/**/*.less',['style']).on('change', livereload.changed);
-});
-
-// CONNECT todo geht noch nicht
-gulp.task('connect', function() {
-    connect.server({
-        livereload: true
-    });
 });
 
 // DEFAULT TASK
