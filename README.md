@@ -1,12 +1,12 @@
-## typo scale mixin
+# typo scale mixin
 
-# typo-scale.less:
+### typo-scale.less:
 responsive typography mixin with
 * 3 font sizes
 * 3 scale modes
 * 3 line-heights
 
-# gulp:
+### gulp:
 useful gulp functions
-* less function with sourcemaps
+* less function with source-maps
 * watch function with live reload
