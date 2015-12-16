@@ -6,7 +6,7 @@
 
 // Mixin
 
-// grid base
+// base grid loop
 .make-grid(@n, @i: 1) when (@i =< @n) {
 
   // flex grid
@@ -28,7 +28,7 @@
   .make-grid(@n, (@i + 1));
 }
 
-// grid widths
+// grid widths loop
 .make-grid-widths(@n, @i: 1) when (@i =< @n) {
 
   // flex grid
