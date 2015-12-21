@@ -8,8 +8,10 @@ responsive typography mixin with
 
 ### flex-grid.less:
 flexbox grid mixin with
-* column number
-* 2 column modes
+* column number variable
+* 2 column modes:
+	* flex grow factor grid widths
+	* classic percentage grid widths
 
 ### gulp:
 useful gulp functions
